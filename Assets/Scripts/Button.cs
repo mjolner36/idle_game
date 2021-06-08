@@ -7,11 +7,21 @@ using UnityEngine.UI;
 public class Button : MonoBehaviour
 {
     public Sprite butt_on, butt_off;
+	AudioSource click;
 
-	void OnMouseDown()
+	private void Start()
+    {
+       click = GameObject.FindGameObjectWithTag("Click").GetComponent<AudioSource>();
+
+    }
+
+
+    void OnMouseDown()
 	{	
 		gameObject.GetComponent<Image>().sprite = butt_on;
-		
+
+		click.Play();
+
 	}
 
 	void OnMouseUp()
@@ -26,8 +36,20 @@ public class Button : MonoBehaviour
 			case "ButtonPlay":
 				SceneManager.LoadScene("Game");
 				break;
-			
+			case "exit":
+				Application.Quit();
+				break;
+			case "caption":
+				SceneManager.LoadScene("Сaption");
+				break;
+			case "record":
+				SceneManager.LoadScene("Game");
+				break;
 		}
+
+
+
+		
 	}
 
 

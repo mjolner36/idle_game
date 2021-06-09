@@ -1,20 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class SpawnMonsters : MonoBehaviour
 {   
     public GameObject Monster;
-    // Start is called before the first frame update
-    void Start()
-    {
-        Instantiate(Monster, new Vector2(Random.Range(-2.4f, 2.4f),Random.Range(-4.4f, 3f)), Quaternion.identity);
-    }
+    public int level=50;
+    public  int gameover;
 
-    // Update is called once per frame
+
+    private void Start()
+    {
+        gameover = 0;
+    }
     void Update()
     {
         
+        if (gameover<10) TimeSpawn(Random.Range(0, level));
+
+
+    }
+
+
+    void  TimeSpawn( int num)
+    {
+        if (num == 9)     
+            СoordinateSpawn();        
+    }
+
+    void СoordinateSpawn()
+    {
+        Instantiate(Monster, new Vector2(Random.Range(-2.4f, 2.4f), Random.Range(-4.4f, 3f)), Quaternion.identity);
+        gameover++;
     }
 }

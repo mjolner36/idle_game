@@ -8,20 +8,33 @@ public class SpawnMonsters : MonoBehaviour
     public GameObject Monster;
     public int level=50;
     public  int gameover;
+    static public bool pause;
+    public GameObject repeat;
+    AudioSource gameovermusic;
+
 
 
     private void Start()
     {
         gameover = 0;
+        pause = false;
+       
     }
     void Update()
     {
-        
-        if (gameover<10) TimeSpawn(Random.Range(0, level));
-
-
+        if (gameover < 10) TimeSpawn(Random.Range(0, level));
+        else
+        {
+            GameOver();
+        }
     }
 
+    void GameOver()
+    {
+            pause = true;
+            repeat.SetActive(true);
+           
+    }
 
     void  TimeSpawn( int num)
     {

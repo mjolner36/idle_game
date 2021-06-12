@@ -43,7 +43,7 @@ public class Button : MonoBehaviour
 				SceneManager.LoadScene("Сaption");
 				break;
 			case "record":
-				SceneManager.LoadScene("Game");
+				SceneManager.LoadScene("record");
 				break;
 			case "buttonback":
 				SceneManager.LoadScene("Menu");

@@ -39,11 +39,11 @@ public class Button : MonoBehaviour
 			case "exit":
 				Application.Quit();
 				break;
-			case "caption":
+			case "title":
 				SceneManager.LoadScene("Сaption");
 				break;
 			case "record":
-				SceneManager.LoadScene("record");
+				SceneManager.LoadScene("Record");
 				break;
 			case "buttonback":
 				SceneManager.LoadScene("Menu");

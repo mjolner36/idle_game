@@ -33,6 +33,7 @@ public class SpawnMonsters : MonoBehaviour
     {
             pause = true;
             repeat.SetActive(true);
+            PlayerPrefs.SetInt("Score",Score.score);
            
     }
 

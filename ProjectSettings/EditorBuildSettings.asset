@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/\u0421aption.unity"
     guid: 56db5ae3336dbfd4182d8de788b98d79
+  - enabled: 1
+    path: Assets/Scenes/Record.unity
+    guid: f2c3c4479967ab64b8d08f7ff20b7c1c
   m_configObjects: {}
